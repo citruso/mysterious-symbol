@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fff;
+      }
+      main {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: 1.7s rotate linear infinite;
+      }
+      #circle {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        background-color: #000;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      #line {
+        width: 250px;
+        height: 5px;
+        background-color: #000;
+        z-index: 1;
+      }
+      #line:before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: #000;
+        border-radius: 50%;
+        left: -20px;
+        top: -16px;
+      }
+      #line:after {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: #000;
+        border-radius: 50%;
+        left: 230px;
+        top: -16px;
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="circle"></div>
+      <div id="line"></div>
+    </main>
+  </body>
+</html>
